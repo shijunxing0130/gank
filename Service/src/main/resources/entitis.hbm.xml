@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.gank.service.bean.UserBean" table="t_user">
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="phone" column="phone"/>
+        <property name="password" column="password"/>
+        <property name="token" column="token"/>
+        <property name="username" column="username"/>
+        <property name="userhead" column="userhead"/>
+        <property name="version" column="version"/>
+        <property name="device" column="device"/>
+    </class>
+
+
+    <class name="com.gank.service.bean.CollectBean" table="t_collect">
+        <id name="id" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="user_id" column="user_id"/>
+        <property name="_id" column="_id"/>
+        <property name="createdAt" column="createdAt"/>
+        <property name="desc" column="des"/>
+        <property name="publishedAt" column="publishedAt"/>
+        <property name="type" column="type"/>
+        <property name="url" column="url"/>
+        <property name="who" column="who"/>
+
+    </class>
+
+
+</hibernate-mapping>

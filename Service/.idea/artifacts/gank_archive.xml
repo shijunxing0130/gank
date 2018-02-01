@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="gank_archive">
+    <output-path>$PROJECT_DIR$/out/artifacts/gank_archive</output-path>
+    <root id="archive" name="gank_archive.war">
+      <element id="artifact" artifact-name="gank" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+	   http://www.springframework.org/schema/context
+	   http://www.springframework.org/schema/context/spring-context-4.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <context:component-scan base-package="com.gank.service" use-default-filters="false">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+        <context:exclude-filter type="annotation"
+                                expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
+    </context:component-scan>
+
+    <!-- 配置c3p0链接池 -->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="com.mysql.jdbc.Driver"/>
+        <property name="jdbcUrl" value="jdbc:mysql:///gank_db?Unicode=true&amp;characterEncoding=UTF-8"/>
+        <property name="user" value="root"/>
+        <!--测试环境-->
+        <property name="password" value="5201314sjx"/>
+        <!--正式环境-->
+        <!--<property name="password" value=""/>-->
+    </bean>
+
+    <!-- 配置sessionFactory -->
+    <bean id="sessionFactory" class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="configLocations" value="classpath:hibernate.cfg.xml"/>
+    </bean>
+
+
+    <!-- 配置事物管理器 -->
+    <bean id="transactionManager" class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+    <!--开启事物注解 -->
+    <tx:annotation-driven transaction-manager="transactionManager"/>
+
+    <!-- 配置server -->
+    <bean id="loginService" class="com.gank.service.service.UserService"/>
+
+    <!-- 配置server -->
+    <bean id="collectService" class="com.gank.service.service.CollectService"/>
+
+
+    <!-- 配置dao -->
+    <bean id="userDaoImpl" class="com.gank.service.dao.UserDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+
+    <bean id="tokenDaoImpl" class="com.gank.service.dao.TokenDaoImpl">
+        <property name="storageCache" ref="storageCache"/>
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="defaultEncoding" value="utf-8" />
+        <property name="maxUploadSize" value="10485760000" />
+        <property name="maxInMemorySize" value="40960" />
+    </bean>
+
+
+    <bean id="CollectDaoImpl" class="com.gank.service.dao.CollectDaoImpl">
+        <property name="sessionFactory" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="storageCache" class="com.gank.service.redis.RedisCacheStorageImpl">
+        <property name="redisClient" ref="redisClient"/>
+    </bean>
+
+    <!-- jedis 连接池配置参数：  -->
+    <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <property name="maxIdle" value="25"/>
+        <property name="maxWaitMillis" value="15000"/>
+        <property name="testOnBorrow" value="false"/>
+        <property name="testOnReturn" value="false"/>
+    </bean>
+    <!-- jedis 连接池  连接本地redis服务 构造器注入-->
+    <bean id="pool" class="redis.clients.jedis.JedisPool">
+        <constructor-arg name="poolConfig" ref="poolConfig"/>
+        <constructor-arg name="host" value="127.0.0.1"/>
+        <constructor-arg name="port" value="6379"/>
+        <!--正式环境-->
+
+
+    </bean>
+    <!-- cleint-->
+    <bean id="redisClient" class="com.gank.service.redis.RedisClient">
+        <property name="pool" ref="pool"/>
+
+    </bean>
+
+
+</beans>
