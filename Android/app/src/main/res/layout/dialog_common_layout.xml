@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/dialog_bg"
+        android:layout_marginLeft="80px"
+        android:layout_marginRight="80px"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/message"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="50px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:layout_marginTop="50px"
+                android:gravity="center"
+                android:lineSpacingMultiplier="1.5"
+                android:text="你确定要取消预约一元购用户？"
+                android:textColor="@color/colorThemeBlack"
+                android:textSize="35px"
+                />
+        </LinearLayout>
+        <View android:layout_height="1px"
+            android:layout_width="match_parent"
+            android:background="#E1E1E1"
+            android:layout_alignParentBottom="true"/>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="100px"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/colorThemeGolden"
+                android:textSize="32px"
+                android:text="含泪而去"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:id="@+id/tv_simple_dialog_left" />
+            <View
+                android:id="@+id/middle_view"
+                android:layout_height="match_parent"
+                android:layout_width="1px"
+                android:background="#E1E1E1"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/colorThemeGolden"
+                android:textSize="32px"
+                android:text="我再等等"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:id="@+id/tv_simple_dialog_right" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

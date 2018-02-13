@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efeff4"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15px"
+        android:gravity="center"
+        android:text="此网页由 gank.io 提供"
+        android:textColor="@color/colorThemeGray"
+        android:textSize="24px"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_more_dialog_third_part"
+        android:layout_width="match_parent"
+        android:layout_marginTop="45px"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:fadingEdge="none"
+        android:visibility="gone"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="vertical"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginRight="20px"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="60px"
+        android:visibility="gone"
+        android:background="@color/colorThemeGray3"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_more_dialog_system"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingLeft="10px"
+        android:paddingRight="10px"
+        android:layout_marginTop="26px"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:fadingEdge="none"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="vertical"/>
+
+    <TextView
+        android:id="@+id/tv_more_dialog_cancle"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="#fafafb"
+        android:layout_marginTop="56px"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/colorThemeBlack"
+        android:textSize="36px"/>
+</LinearLayout>

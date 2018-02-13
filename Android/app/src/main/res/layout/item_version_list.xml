@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150px">
+
+        <View
+            android:layout_width="1px"
+            android:layout_centerHorizontal="true"
+            android:background="@color/gray_e7e7e7"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:id="@+id/tv_item_version_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="48px"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/update_date_bg"
+            android:paddingLeft="4px"
+            android:paddingRight="4px"
+            android:text="1.0.0"
+            android:textColor="@color/white"
+            android:textSize="24px"
+            />
+
+        <TextView
+            android:id="@+id/tv_item_version_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="100px"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="4px"
+            android:paddingRight="4px"
+            android:text="2018年1月30号更新"
+            android:textColor="@color/gray_b3b3b3"
+            android:textSize="24px"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:minHeight="100px"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="16px"
+            android:layout_height="16px"
+            android:layout_marginLeft="24px"
+            android:background="@drawable/circle_bg"/>
+
+        <TextView
+            android:id="@+id/tv_item_version_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16px"
+            android:layout_marginRight="16px"
+            android:text="干货集中正式上线"
+            android:textColor="@color/colorThemeBlack"
+            android:textSize="30px"
+            />
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/gray_e7e7e7"
+        android:layout_height="1px"/>
+</LinearLayout>

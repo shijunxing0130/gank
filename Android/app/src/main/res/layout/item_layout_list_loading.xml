@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+    <View
+        android:layout_width="16px"
+        android:layout_height="16px"
+        android:layout_marginLeft="24px"
+        android:layout_marginTop="30px"
+        android:background="@drawable/circle_bg_gray"/>
+
+    <View
+        android:id="@+id/tv_item_today_list_time"
+        android:layout_width="150px"
+        android:layout_height="30px"
+        android:layout_marginLeft="60px"
+        android:layout_marginTop="22px"
+        android:background="@color/colorThemeGray5"
+        />
+
+
+
+    <View
+        android:id="@+id/tv_item_today_list_content"
+        android:layout_width="match_parent"
+        android:layout_height="140px"
+        android:layout_marginLeft="60px"
+        android:layout_marginRight="60px"
+        android:layout_marginTop="62px"
+        android:paddingBottom="20px"
+        android:paddingTop="20px"
+        android:background="@color/colorThemeGray5"
+
+        />
+
+
+    <TextView
+        android:id="@+id/tv_item_today_list_author"
+        android:layout_width="100px"
+        android:layout_height="30px"
+        android:layout_below="@+id/tv_item_today_list_content"
+        android:layout_marginLeft="60px"
+        android:layout_marginTop="10px"
+        android:background="@color/colorThemeGray5"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/tv_item_today_list_author"
+        android:layout_marginLeft="60px"
+        android:layout_marginTop="28px"
+        android:background="@color/colorThemeGray3"
+        />
+</RelativeLayout>

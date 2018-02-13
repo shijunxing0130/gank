@@ -39,7 +39,7 @@ public class RequestInterceptor implements HandlerInterceptor {
         String uri = request.getRequestURI();
 
         //登录 注册
-        if (uri.endsWith("user/login") || uri.endsWith("user/register") || uri.endsWith("user/logout") || uri.startsWith("/upload/")) {
+        if (uri.endsWith("user/login") || uri.endsWith("user/register") || uri.endsWith("user/logout") || uri.startsWith("/upload/") || uri.startsWith("/updatePwd/")) {
             return true;
         } else {
             //判断是否包含timestamp，token，sign参数，如果不含有返回错误码。

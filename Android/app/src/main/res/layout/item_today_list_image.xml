@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/rl_today_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/iv_item_today_list_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="70px"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_item_today_list_date"
+        android:layout_width="140px"
+        android:layout_height="140px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="40px"
+        android:background="@drawable/data_bg"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/tv_item_today_list_image_day"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="07"
+            android:textColor="@color/colorThemeBlack"
+            android:textSize="54px"/>
+
+        <TextView
+            android:id="@+id/tv_item_today_list_image_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9月"
+            android:textColor="@color/colorThemeBlack"
+            android:textSize="28px"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

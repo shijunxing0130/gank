@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/main_frame_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:background="@drawable/actionbar_shadow_up"
+        android:layout_above="@android:id/tabhost"
+        android:layout_height="wrap_content"/>
+
+    <com.github.mmin18.widget.RealtimeBlurView
+        android:id="@+id/blurview"
+        android:layout_width="match_parent"
+        android:layout_height="98px"
+        app:realtimeBlurRadius="15dp"
+        android:layout_alignParentBottom="true"
+        app:realtimeOverlayColor="#B3ffffff"/>
+
+
+    <com.gank.android.app.view.FragmentTabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="98px"
+        android:layout_alignParentBottom="true"
+        />
+
+
+</RelativeLayout>

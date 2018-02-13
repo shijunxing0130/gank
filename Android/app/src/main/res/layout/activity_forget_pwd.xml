@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_toolbar_left"
+        android:layout_width="74px"
+        android:layout_height="74px"
+        android:layout_marginTop="22px"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/iv_forget_pwd_close"
+            android:layout_width="17px"
+            android:layout_height="35px"
+            android:src="@drawable/icon_back_black"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_forget_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="141px"
+        android:layout_marginTop="213px"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40px"
+            android:text="忘记密码"
+            android:textColor="@color/colorThemeBlack"
+            android:textSize="55px"
+            />
+
+        <TextView
+            android:id="@+id/tv_forget_tip"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="20px"
+            android:text="注册此账户以使用更多服务"
+            android:textColor="@color/gray_b3b3b3"
+            android:textSize="28px"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="30px"
+            android:text="新密码"
+            android:textColor="@color/gray_b3b3b3"
+            android:textSize="26px"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="20px">
+
+            <EditText
+                android:id="@+id/et_forget_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:textColor="@color/colorThemeBlack"
+                android:textSize="38px"/>
+
+
+            <ImageButton
+                android:id="@+id/iv_forget_clear_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="#00000000"
+                android:padding="5px"
+                android:src="@drawable/ic_delete_number_login"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/v_line_forget_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            android:layout_marginLeft="40px"
+            android:background="@color/colorThemeGray5"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="20px"
+            android:text="验证码"
+            android:textColor="@color/gray_b3b3b3"
+            android:textSize="26px"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="20px">
+
+
+            <com.jkb.vcedittext.VerificationCodeEditText
+                android:id="@+id/et_forget_code"
+                android:layout_width="350px"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15px"
+                android:inputType="number"
+                android:textColor="@color/colorThemeBlack"
+                android:textSize="38px"
+                app:bottomLineHeight="2dp"
+                app:bottomLineNormalColor="@color/colorThemeGray5"
+                app:bottomLineSelectedColor="@color/colorThemeGolden"
+                app:figures="6"
+                app:selectedBackgroundColor="@color/colorThemeGray5"
+                app:verCodeMargin="5dp"/>
+
+            <TextView
+                android:id="@+id/tv_forget_get_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30px"
+                android:layout_marginTop="30px"
+                android:text="获取验证码"
+                android:textColor="@color/colorThemeBlack"
+                android:textSize="26px"/>
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_forget_done"
+        android:layout_width="130px"
+        android:layout_height="60px"
+        android:layout_alignBottom="@+id/ll_forget_input"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5px"
+        android:layout_marginRight="20px"
+        android:background="@drawable/oval_btn_bg_gray"
+        android:gravity="center"
+        android:padding="10px"
+        android:text="完成"
+        android:textColor="@color/white"
+        android:textSize="28px"/>
+
+
+</RelativeLayout>

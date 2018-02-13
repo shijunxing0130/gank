@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/colorThemeGray5"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="160px"
+            android:layout_height="160px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="80px"
+            android:src="@drawable/icon_gank"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="260px"
+            android:text="干货集中营"
+            android:textColor="@color/colorThemeBlack"
+            android:textSize="28px"
+            />
+
+        <TextView
+            android:id="@+id/tv_about_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="300px"
+            android:text="v 1.0.0"
+            android:textSize="20px"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="400px"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_about_author"
+                android:layout_width="match_parent"
+                android:layout_height="90px"
+                android:background="@color/white"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="40px"
+                    android:text="关于作者"
+                    android:textColor="@color/colorThemeBlack"
+                    android:textSize="29px"
+                    />
+
+                <ImageView
+                    android:layout_width="16px"
+                    android:layout_height="26px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30px"
+                    android:src="@drawable/icon_into"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_about_github"
+                android:layout_width="match_parent"
+                android:layout_height="90px"
+                android:background="@color/white"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="40px"
+                    android:text="作者 GitHub"
+                    android:textColor="@color/colorThemeBlack"
+                    android:textSize="29px"
+                    />
+
+                <ImageView
+                    android:layout_width="16px"
+                    android:layout_height="26px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30px"
+                    android:src="@drawable/icon_into"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_about_thank"
+                android:layout_width="match_parent"
+                android:layout_height="90px"
+                android:background="@color/white"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="40px"
+                    android:text="致谢干货集中营及代码家"
+                    android:textColor="@color/colorThemeBlack"
+                    android:textSize="29px"
+                    />
+
+                <ImageView
+                    android:layout_width="16px"
+                    android:layout_height="26px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30px"
+                    android:src="@drawable/icon_into"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_about_libs"
+                android:layout_width="match_parent"
+                android:layout_height="90px"
+                android:background="@color/white"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="40px"
+                    android:text="开源组件"
+                    android:textColor="@color/colorThemeBlack"
+                    android:textSize="29px"
+                    />
+
+                <ImageView
+                    android:layout_width="16px"
+                    android:layout_height="26px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30px"
+                    android:src="@drawable/icon_into"
+                    />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

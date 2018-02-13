@@ -1,0 +1,91 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        applicationId 'com.android.gank'
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        renderscriptTargetApi rootProject.ext.android.targetSdkVersion
+        renderscriptSupportModeEnabled true    // Enable RS support
+
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [ moduleName : project.getName() ]
+            }
+        }
+
+    }
+
+    signingConfigs {
+        release {
+//            填入自己的
+//            storeFile file('dbshop.jks')
+//            storePassword '5201314sjx'
+//            keyAlias 'dbshop'
+//            keyPassword '5201314sjx'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+
+    buildTypes {
+        /*debug {
+            signingConfig signingConfigs.release
+        }
+*/
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    //兼容Android6.0系统所需，如果这句话报错，可在dependencies标签下使用compile 'cn.bmob.android:http-legacy:1.0'
+    useLibrary 'org.apache.http.legacy'
+}
+
+buildscript {
+    repositories {
+        jcenter()
+        maven { url "https://jitpack.io" }
+        mavenCentral()
+
+    }
+    dependencies {
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+    }
+}
+
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    apt rootProject.ext.dependencies["butterknife-apt"]
+    compile rootProject.ext.dependencies["statusbaruitl"]
+    compile rootProject.ext.dependencies["swipebacklayout"]
+    compile rootProject.ext.dependencies["bugly"]
+    compile rootProject.ext.dependencies["realtimeblurview"]
+    compile rootProject.ext.dependencies["agentweb"]
+    compile rootProject.ext.dependencies["galleryfinal"]
+    compile rootProject.ext.dependencies["SwipeDelMenuLayout"]
+    compile rootProject.ext.dependencies["overscroll"]
+    compile rootProject.ext.dependencies["vercodeedittext"]
+    compile rootProject.ext.dependencies["switchbutton"]
+
+    compile project(path: ':refresh-layout')
+    compile project(path: ':calendarview')
+    compile project(':mvc')
+
+}

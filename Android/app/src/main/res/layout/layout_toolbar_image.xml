@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/ll_toolbar"
+                android:layout_width="match_parent"
+                android:background="@color/toolbar_color"
+                android:layout_height="140px">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_height="100px">
+
+
+
+        <ImageView
+            android:id="@+id/ll_toolbar_left"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="26px"
+            android:background="@drawable/close_white"/>
+
+        <ImageView
+            android:id="@+id/iv_toolbar_save"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="88px"
+            android:background="@drawable/icon_save"/>
+        <ImageView
+            android:id="@+id/iv_toolbar_share"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="28px"
+            android:background="@drawable/icon_share"/>
+
+    </RelativeLayout>
+</RelativeLayout>

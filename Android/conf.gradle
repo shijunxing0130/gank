@@ -1,0 +1,77 @@
+ext {
+
+    android = [
+            compileSdkVersion: 25,
+            buildToolsVersion: "25.0.2",
+
+            minSdkVersion    : 16,
+            targetSdkVersion : 25,
+
+            versionCode      : 5,
+            versionName      : '1.0.5',
+
+            VSupportSdk      : '25.1.0'
+    ]
+
+    dependencies = [
+
+            //lib
+            "appcompat-v7"      : "com.android.support:appcompat-v7:${android["VSupportSdk"]}",
+            "support-v4"        : "com.android.support:support-v4:${android["VSupportSdk"]}",
+            "design"            : "com.android.support:design:${android["VSupportSdk"]}",
+            "recyclerview-v7"   : "com.android.support:recyclerview-v7:${android["VSupportSdk"]}",
+            "glide"             : "com.github.bumptech.glide:glide:3.7.0",
+            "glide-transformations"          : "jp.wasabeef:glide-transformations:2.0.2",
+            "gson"              : "com.google.code.gson:gson:2.6.2",
+            "eventbus"          : "org.greenrobot:eventbus:3.0.0",
+            "okhttputils"       : "com.lzy.net:okgo:2.1.4",
+            "autolayout"        : "com.zhy:autolayout:1.4.5",
+            "logger"            : "com.orhanobut:logger:1.15",
+            "butterknife"       : "com.jakewharton:butterknife:8.4.0",
+            "ARouter_api"       : "com.alibaba:arouter-api:1.2.1.1",
+            "ARouter_compiler"  : "com.alibaba:arouter-compiler:1.1.2.1",
+
+            //app
+            "kprogresshud"       : "com.kaopiz:kprogresshud:1.0.2",
+            "UtilCode"           : "com.blankj:utilcode:1.9.0",
+            "butterknife-apt"    : "com.jakewharton:butterknife-compiler:8.4.0",
+            "roundedimageview"   : "com.makeramen:roundedimageview:2.3.0",
+            "statusbaruitl"      : "com.jaeger.statusbaruitl:library:1.3.6",
+            "swipebacklayout"    : "cn.bingoogolapple:bga-swipebacklayout:1.0.7@aar",
+            "galleryfinal"       : "cn.finalteam:galleryfinal:1.4.8.7",
+            "PickerView"         : "com.contrarywind:Android-PickerView:3.2.2",
+            "hotfix"             : "com.aliyun.ams:alicloud-android-hotfix:3.0.1",
+            "blurringview"       : "com.fivehundredpx:blurringview:1.0.0",
+            "alerter"            : "com.tapadoo.android:alerter:2.0.1",
+            "scriptblur"         : "com.eightbitlab:supportrenderscriptblur:1.0.0",
+            "blurview"           : "com.eightbitlab:blurview:1.3.3",
+            "AdapterHelper"      : "com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.15",
+            "banner"             : "cn.bingoogolapple:bga-banner:2.1.7@aar",
+            "sliding-root-nav"   : "com.yarolegovich:sliding-root-nav:1.0.2",
+            "bugly"              : "com.tencent.bugly:crashreport_upgrade:latest.release",
+            "tablayout"          : "com.flyco.tablayout:FlycoTabLayout_Lib:2.1.2@aar",
+            "nineoldandroids"    : "com.nineoldandroids:library:2.4.0",
+            "parallaxscroll"     : "com.github.nirhart:parallaxscroll:1.0",
+            "agentweb"           : "com.just.agentweb:agentweb:2.0.0",
+            "easing"             : "com.daimajia.easing:library:1.0.1@aar",
+            "androidanimations"  : "com.daimajia.androidanimations:library:1.1.3@aar",
+            "fragmentation"      : "me.yokeyword:fragmentation:1.0.7",
+            "fragmentation-swipebackions"  : "me.yokeyword:fragmentation-swipeback:1.0.7",
+            "circleimageview"              : "de.hdodenhof:circleimageview:2.1.0",
+            "realtimeblurview"             : "com.github.mmin18:realtimeblurview:1.0.6",
+            "SmartRefreshLayout"           : "com.scwang.smartrefresh:SmartRefreshLayout:1.0.3",
+            "easyrecyclerview"             : "com.jude:easyrecyclerview:4.2.6",
+            "skeleton"           : "com.ethanhua:skeleton:1.0.0",
+            "legacy"             : "cn.bmob.android:http-legacy:1.0",
+            "bmob-sdk"           : "cn.bmob.android:bmob-sdk:3.5.7",
+            "bmob-push"          : "cn.bmob.android:bmob-push:1.0.1",
+            "shareutil"          : "me.shaohui.shareutil:shareutil:1.3.8",
+            "SwipeDelMenuLayout" : "com.github.mcxtzhang:SwipeDelMenuLayout:V1.3.0",
+            "overscroll"         : "me.everything:overscroll-decor-android:1.0.4",
+            "vercodeedittext"         : "com.justkiddingbaby:vercodeedittext:1.0.4",
+            "switchbutton"         : "com.kyleduo.switchbutton:library:2.0.0",
+
+
+
+    ]
+}

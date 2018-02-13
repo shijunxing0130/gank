@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#353535</color>
+    <color name="colorPrimaryDark">#353535</color>
+    <color name="colorAccent">#353535</color>
+    <color name="colorThemeBlack">#353535</color>
+    <color name="colorThemeGolden">#D49E39</color>
+    <color name="colorThemeGray">#888888</color>
+    <color name="colorThemeGray2">#b2b2b2</color>
+    <color name="colorThemeGray3">#e5e5e5</color>
+    <color name="colorThemeGray4">#f0f0f0</color>
+    <color name="colorThemeGray5">#efefef</color>
+    <color name="colorThemeGray6">#fafafa</color>
+
+
+
+    <color name="color_tag_android">#a6c348</color>
+    <color name="color_tag_ios">#333333</color>
+    <color name="color_tag_h5">#ea4b39</color>
+    <color name="color_tag_app">#58bcf6</color>
+    <color name="color_tag_resurce">#115480</color>
+    <color name="color_tag_vedio">#f3a536</color>
+    <color name="color_tag_welfare">#9e6937</color>
+    <color name="color_tag_recommon">#eedd38</color>
+
+
+    <color name="black_222024">#222024</color>
+    <color name="gray_b3b3b3">#b3b3b3</color>
+
+
+
+    <!--主题-->
+    <color name="green">#20bf7a</color>
+    <color name="red">#ff5454</color>
+    <color name="Theme_yellow">#fbbf3a</color>
+    <color name="Theme_red">#f3683f</color>
+
+    <color name="textColorPrimary">#212121</color>
+    <color name="toolbar_color">#E6212121</color>
+    <!-- 透明 -->
+    <color name="transparent">#00000000</color>
+    <color name="transparent_half">#10000000</color>
+    <!-- 半透明黑 -->
+    <!-- 半透明黑 -->
+    <!-- 半透明白4f -->
+    <!-- 半透明白8f -->
+    <!-- 白色 -->
+    <color name="white">#ffffffff</color>
+    <!-- 黑色 -->
+    <!--暗暗的-->
+    <!-- 主色调  蓝色  用于部分按钮  icon 小提示 -->
+    <!-- 网红界面专用蓝色 （字体，背景） -->
+    <!-- 主色调  蓝色  用于部分按钮  icon 按下选中点击 -->
+    <!-- 按钮补课点击时的颜色 -->
+    <!--网红界面暗金色-->
+    <!--网红界面暗金色-->
+    <!--深红色-->
+    <color name="color_red">#e51c23</color>
+
+    <color name="yellow_bg">#ffffdb4c</color>
+
+    <!-- 金色 -->
+    <color name="color_gold">#c89664</color>
+    <!--关注成功后变颜色-->
+    <!-- 主要用于文字  标题  正文 -->
+    <!-- 次要文字颜色 -->
+    <color name="color_gary">#ff858080</color>
+    <!-- 次要文字颜色 2 -->
+    <!-- 底部背景色  输入框  搜索中标签用色 -->
+    <color name="color_gray_bg">#f8f9fb</color>
+    <!-- 底部背景色  输入框  搜索中标签用色 -->
+    <!-- 底部背景色  输入框  搜索中标签用色 -->
+    <!-- 会员特权 已发放等浅色字体颜色 -->
+    <!-- 字体颜色 -->
+    <!--  -->
+    <!-- 分割线颜色 -->
+    <color name="color_light_gray">#e5e5e5</color>
+    <!-- divider 颜色 -->
+    <!-- divider -->
+    <!-- 特权 textview的颜色 -->
+    <!-- 提现记录里面灰色的线的颜色 -->
+    <!-- 快捷登录界面hint -->
+
+    <!-- 状态栏颜色 -->
+    <!-- Banner指示器当前颜色 -->
+    <!-- Banner 指示器默认颜色 -->
+    <!-- 主色调白色（背景） -->
+    <color name="main_while">#ffffffff</color>
+    <!-- 主色调灰白（背景） -->
+    <color name="main_while2">#fafafa</color>
+    <!-- 主色调黑色（字体） -->
+    <color name="main_tab_text_n">#4E4E4E</color>
+    <!-- 主色调黑色（字体 背景） -->
+    <!-- 主色调灰色（字体） -->
+    <color name="main_tab_text_n2">#ff858080</color>
+    <color name="main_tab_text_gray">#AEAEAE</color>
+    <!-- 主色调灰色（分割线） -->
+    <color name="main_tab_text_division">#ffeeeeee</color>
+    <!-- 主色调灰色（分割线） -->
+    <!-- 主色调金色 （字体，背景） -->
+    <!-- 主色调金色焦点 （字体，背景） -->
+    <!-- 主色调蓝色 （字体，背景） -->
+    <color name="main_blue_n">#ff052841</color>
+    <!-- 主色调蓝色焦点 （字体，背景） -->
+    <!-- 主色调浅蓝色 （字体,按钮背景） -->
+    <!-- 订单tab 导航按钮颜色 -->
+    <!-- 订单tab 导航按钮颜色 -->
+    <!-- 订单tab 导航按钮颜色 -->
+
+    <!--我的财富界面  金色字体-->
+    <!--积分记录筛选 字体颜色-->
+    <!--网红主页的statusbar 颜色-->
+
+    <!-- UCrop colors -->
+
+    <color name="welfare_gray">#eeeeee</color>
+    <color name="black">#000000</color>
+
+    <!--福利袋详情的边框 #dfe0e1-->
+    <color name="search_corner_bg">#ddBBBABA</color>
+    <!--动态详情曾色字体-->
+    <color name="color_orange_red">#f03f33</color>
+    <color name="lineColor">#11333333</color>
+    <color name="black_font">#bb000000</color>
+    <!--播放视频相关-->
+</resources>

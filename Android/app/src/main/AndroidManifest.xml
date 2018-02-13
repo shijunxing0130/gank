@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="com.gank.android.app">
+
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_LOGS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+
+    <!--推送所需的权限-->
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+
+
+    <application
+        android:name=".GankApp"
+        android:allowBackup="true"
+        android:icon="@drawable/icon_gank"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/icon_gank"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--bugly  填自己的-->
+        <meta-data
+            android:name="com.tencent.rdm.uuid"
+            android:value="a9597980-f2bd-47cb-8e8c"
+            tools:replace="android:value"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent"/>
+
+        <!--autoLayout-->
+        <meta-data
+            android:name="design_width"
+            android:value="720">
+        </meta-data>
+
+        <meta-data
+            android:name="design_height"
+            android:value="1280">
+        </meta-data>
+
+
+        <!--bomb加推送所需要的服务和广播-->
+        <service
+            android:name="cn.bmob.push.lib.service.PushService"
+            android:exported="true"
+            android:label="PushService"
+            android:process=":bmobpush">
+            <intent-filter>
+                <action android:name="cn.bmob.push.lib.service.PushService"/>
+            </intent-filter>
+        </service>
+
+        <!-- 用于进程保活 -->
+        <service
+            android:name="cn.bmob.push.lib.service.PushNotifyService"
+            android:process=":bmobpush">
+        </service>
+
+        <receiver android:name="cn.bmob.push.PushReceiver">
+            <intent-filter>
+                <!-- 系统启动完成后会调用 -->
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <!-- 解锁完成后会调用 -->
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <!-- 监听网络连通性 -->
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 第3步中创建的消息接收器，在这里进行注册 -->
+        <receiver android:name="com.gank.android.app.net.MyPushMessageReceiver">
+            <intent-filter>
+                <action android:name="cn.bmob.push.action.MESSAGE"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 接收心跳和唤醒的广播，要和PushService运行在同个进程 -->
+        <receiver
+            android:name="cn.bmob.push.PushNotifyReceiver"
+            android:process=":bmobpush">
+            <intent-filter>
+                <!-- 接收心跳广播的action -->
+                <action android:name="cn.bmob.push.action.HEARTBEAT"/>
+                <!-- 接收唤醒广播的action -->
+                <action android:name="cn.bmob.push.action.NOTIFY"/>
+            </intent-filter>
+        </receiver>
+        <!--bomb加推送所需要的服务和广播-->
+
+        <activity
+            android:name=".ui.main.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!--主要-->
+        <activity
+            android:name=".ui.main.AdActivity"
+            android:theme="@style/AppTheme">
+
+            <intent-filter>
+                <action android:name="android.gank.main.activity"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data
+                    android:host="uri.gank.main"
+                    android:scheme="gank"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.main.WelcomeActivity"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".ui.main.MainActivity"
+            android:theme="@style/AppTheme"/>
+        <!--历史-->
+        <activity
+            android:name=".ui.today.HistoryActivity"
+            android:theme="@style/AppTheme.Transparent"/>
+        <!--分类列表-->
+        <activity
+            android:name=".ui.classify.ClassifyListActivity"
+            android:theme="@style/AppTheme.Transparent"/>
+        <!--分类列表-->
+        <activity
+            android:name=".ui.classify.SearchActivity"
+            android:theme="@style/AppTheme.Transparent"/>
+
+        <!--图片-->
+        <activity
+            android:name=".ui.classify.ImageActivity"
+            android:theme="@style/AppTheme.Transparent"/>
+        <!--详情-->
+        <activity
+            android:name=".ui.detail.DetailActivity"
+            android:theme="@style/AppTheme.Transparent"/>
+        <activity
+            android:name=".ui.detail.WebActivity"
+            android:theme="@style/AppTheme.Transparent"/>
+        <!--授权登录-->
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:theme="@style/AppTheme.Transparent"/>
+
+        <activity
+            android:name=".ui.login.RegisterActivity"
+            android:theme="@style/AppTheme.Transparent"/>
+        <activity
+            android:name=".ui.login.CompleteInfoActivity"
+            android:theme="@style/AppTheme.Transparent"/>
+        <activity
+            android:name=".ui.login.ForgetPwdActivity"
+            android:theme="@style/AppTheme.Transparent"/>
+
+        <activity
+            android:name=".ui.mine.CollectListActivity"
+            android:theme="@style/AppTheme.Transparent"/>
+
+
+        <activity
+            android:name=".ui.mine.PushActivity"
+            android:theme="@style/AppTheme.Transparent"/>
+        <activity
+            android:name=".ui.mine.ThanksActivity"
+            android:theme="@style/AppTheme.Transparent"/>
+        <activity
+            android:name=".ui.mine.AboutActivity"
+            android:theme="@style/AppTheme.Transparent"/>
+        <activity
+            android:name=".ui.mine.UpdateActivity"
+            android:theme="@style/AppTheme.Transparent"/>
+        <activity
+            android:name=".ui.mine.LibsActivity"
+            android:theme="@style/AppTheme.Transparent"/>
+        <activity
+            android:name=".ui.mine.VersionUpdateActivity"
+            android:theme="@style/AppTheme.Transparent"/>
+
+
+        <activity
+            android:name=".ui.mine.CommitActivity"
+            android:theme="@style/AppTheme.Transparent"
+            android:windowSoftInputMode="adjustPan"/>
+
+
+    </application>
+
+
+</manifest>

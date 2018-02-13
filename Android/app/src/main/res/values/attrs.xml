@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="MaxHeightListView">
+        <attr name="maxHeight" format="dimension" />
+    </declare-styleable>
+    <!--<declare-styleable name="ExpandableLayout">
+        <attr name="el_duration" format="integer" />
+        <attr name="el_expanded" format="boolean" />
+        <attr name="layout_expandable" format="boolean" />
+    </declare-styleable>-->
+    <declare-styleable name="PayRidioButton">
+        <attr name="title1" format="reference|string" />
+        <attr name="logo1" format="reference|color" />
+        <attr name="desc" format="reference|string" />
+        <attr name="checked" format="boolean" />
+        <attr name="radio" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="ExpandableLayout">
+        <attr name="el_duration" format="integer" />
+        <attr name="el_expanded" format="boolean" />
+        <attr name="layout_expandable" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="HorizontalListView">
+        <attr name="hori_listview_dividerWidth" format="dimension" />
+        <attr name="android:divider" />
+        <attr name="android:requiresFadingEdge" />
+        <attr name="android:fadingEdgeLength" />
+    </declare-styleable>
+
+    <declare-styleable name="GoogleCircleProgressView">
+        <attr name="gcp_inner_radius" format="dimension" />
+        <attr name="gcp_background_color" format="color" />
+        <attr name="gcp_progress_color" format="color" />
+        <attr name="gcp_progress_stoke_width" format="dimension" />
+        <attr name="gcp_show_arrow" format="boolean" />
+        <attr name="gcp_enable_circle_background" format="boolean" />
+        <attr name="gcp_arrow_width" format="dimension" />
+        <attr name="gcp_arrow_height" format="dimension" />
+
+        <attr name="gcp_progress" format="integer" />
+        <attr name="gcp_max" format="integer" />
+
+
+        <attr name="gcp_progress_text_size" format="dimension" />
+        <attr name="gcp_progress_text_color" format="color" />
+
+        <!--<attr name="gcp_progress_text_offset" format="dimension"/>-->
+
+        <attr name="gcp_progress_text_visibility" format="enum">
+            <enum name="visible" value="0" />
+            <enum name="invisible" value="1" />
+        </attr>
+    </declare-styleable>
+
+
+    <declare-styleable name="MultiStateView">
+        <attr name="msv_loadingView" format="reference" />
+        <attr name="msv_emptyView" format="reference" />
+        <attr name="msv_errorView" format="reference" />
+        <attr name="msv_viewState" format="enum">
+            <enum name="content" value="0" />
+            <enum name="error" value="1" />
+            <enum name="empty" value="2" />
+            <enum name="loading" value="3" />
+        </attr>
+        <attr name="msv_animateViewChanges" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="AutoTabLayout">
+        <attr name="auto_textSize_base_width" format="boolean"></attr>
+    </declare-styleable>
+
+
+
+
+    <declare-styleable name="ShoppingView">
+        <attr name="sv_bg_color" format="color" />
+        <attr name="sv_text" format="string" />
+        <attr name="sv_text_size" format="dimension" />
+        <attr name="sv_duration" format="integer" />
+    </declare-styleable>
+
+    <declare-styleable name="MarqueeViewStyle">
+        <attr name="mvInterval" format="integer|reference"/>
+        <attr name="mvAnimDuration" format="integer|reference"/>
+        <attr name="mvTextSize" format="dimension|reference"/>
+        <attr name="mvTextColor" format="color|reference"/>
+        <attr name="mvSingleLine" format="boolean"/>
+        <attr name="mvGravity">
+            <enum name="left" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="right" value="2"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="searchViewAnim">
+        <attr name="sva_longText" format="string" />
+        <attr name="sva_shortText" format="string" />
+        <attr name="sva_longBackground" format="color"/>
+        <attr name="sva_shortBackground" format="color"/>
+        <attr name="sva_textSize" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="VerticalBannerView">
+        <attr name="gap" format="integer" />
+        <attr name="animDuration" format="integer"/>
+    </declare-styleable>
+
+
+
+    //up down viewSwitcher================
+    <declare-styleable name="UpDownViewSwitcher">
+        <attr name="up_to_down" format="boolean" />
+        <attr name="animator_duration" format="integer" />
+        <attr name="switch_duration" format="integer" />
+        <attr name="animator_translate_distance" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="StateView">
+        <attr name="emptyResource" format="reference" />
+        <attr name="retryResource" format="reference" />
+        <attr name="loadingResource" format="reference" />
+    </declare-styleable>
+
+
+    <!--Banner无限轮播属性-->
+    <declare-styleable name="BannerView">
+        <attr name="bannerPageMargin" format="dimension"/>
+        <attr name="bannerPagePercent" format="float"/>
+        <attr name="bannerPageScale" format="float"/>
+        <attr name="bannerPageAlpha" format="float"/>
+        <attr name="bannerScrollDuration" format="integer"/>
+        <attr name="bannerAnimDuration" format="integer"/>
+        <attr name="bannerAnimScroll" format="boolean"/>
+        <attr name="bannerAutoScroll" format="boolean"/>
+    </declare-styleable>
+
+    <!--tab-->
+    <declare-styleable name="stl_SmartTabLayout">
+        <attr name="stl_indicatorAlwaysInCenter" format="boolean"/>
+        <attr name="stl_indicatorWithoutPadding" format="boolean"/>
+        <attr name="stl_indicatorInFront" format="boolean"/>
+        <attr name="stl_indicatorInterpolation" format="enum">
+            <enum name="smart" value="0"/>
+            <enum name="linear" value="1"/>
+        </attr>
+        <attr name="stl_indicatorGravity" format="enum">
+            <enum name="bottom" value="0"/>
+            <enum name="top" value="1"/>
+            <enum name="center" value="2"/>
+        </attr>
+        <attr name="stl_indicatorColor" format="color"/>
+        <attr name="stl_indicatorColors" format="reference"/>
+        <attr name="stl_indicatorThickness" format="dimension"/>
+        <attr name="stl_indicatorWidth" format="dimension">
+            <enum name="auto" value="-1"/>
+        </attr>
+        <attr name="stl_indicatorCornerRadius" format="dimension"/>
+        <attr name="stl_overlineColor" format="color"/>
+        <attr name="stl_overlineThickness" format="dimension"/>
+        <attr name="stl_underlineColor" format="color"/>
+        <attr name="stl_underlineThickness" format="dimension"/>
+        <attr name="stl_dividerColor" format="color"/>
+        <attr name="stl_dividerColors" format="reference"/>
+        <attr name="stl_dividerThickness" format="dimension"/>
+        <attr name="stl_defaultTabBackground" format="reference"/>
+        <attr name="stl_defaultTabTextAllCaps" format="boolean"/>
+        <attr name="stl_defaultTabTextColor" format="color|reference"/>
+        <attr name="stl_defaultTabTextSize" format="dimension"/>
+        <attr name="stl_defaultTabTextHorizontalPadding" format="dimension"/>
+        <attr name="stl_defaultTabTextMinWidth" format="dimension"/>
+        <attr name="stl_customTabTextLayoutId" format="reference"/>
+        <attr name="stl_customTabTextViewId" format="reference"/>
+        <attr name="stl_distributeEvenly" format="boolean"/>
+        <attr name="stl_clickable" format="boolean"/>
+        <attr name="stl_titleOffset" format="dimension">
+            <enum name="auto_center" value="-1"/>
+        </attr>
+        <attr name="stl_drawDecorationAfterTab" format="boolean"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="RongDivisionEditText">
+        <attr name="totalLength" format="integer" />
+        <attr name="sperator" format="string" />
+        <attr name="inputType">
+            <enum name="phone" value="1" />
+            <enum name="bank" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>

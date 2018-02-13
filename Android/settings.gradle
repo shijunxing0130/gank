@@ -1,0 +1,4 @@
+include ':app', ':mvc', ':bsae_library', ':refresh-layout', ':calendarview'
+
+project(':refresh-layout').projectDir = new File('third-party/refresh-layout')
+project(':calendarview').projectDir = new File('third-party/calendarview')

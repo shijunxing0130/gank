@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/ll_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="140px">
+
+    <com.github.mmin18.widget.RealtimeBlurView
+        android:id="@+id/blurview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:realtimeBlurRadius="20dp"
+        app:realtimeOverlayColor="#E6212121"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="15px"
+        android:layout_marginBottom="15px"
+        android:layout_marginRight="120px"
+        android:background="@drawable/bg_search_shape"
+        android:layout_height="65px">
+
+        <ImageView
+            android:id="@+id/iv_toolbar_search"
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15px"
+            android:background="@drawable/icon_cearch"/>
+
+        <EditText
+            android:id="@+id/et_search_content"
+            android:layout_width="match_parent"
+            android:textColorHint="#888888"
+            android:imeOptions="actionSearch"
+            android:singleLine="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="60px"
+            android:layout_marginLeft="60px"
+            android:hint="搜索你想找的干货吧"
+            android:textSize="28px"
+            android:background="@null"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/iv_toolbar_clear"
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15px"
+            android:background="@drawable/icon_clear"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_toolbar_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="26px"
+        android:layout_marginBottom="30px"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/white"
+        android:textSize="34px"/>
+</RelativeLayout>

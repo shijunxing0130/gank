@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mcxtzhang.swipemenulib.SwipeMenuLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:paddingBottom="1dp"
+    app:ios="false"
+    app:leftSwipe="true"
+    app:swipeEnable="true">
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_item_while_selector"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="16px"
+            android:layout_height="16px"
+            android:layout_marginLeft="24px"
+            android:layout_marginTop="30px"
+            android:background="@drawable/circle_bg"/>
+
+        <TextView
+            android:id="@+id/tv_item_today_list_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60px"
+            android:layout_marginTop="22px"
+            android:text="54分钟前"
+            android:textColor="@color/colorThemeGray"
+            android:textSize="26px"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_item_today_list_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24px"
+            android:layout_marginTop="18px"
+            android:layout_toRightOf="@+id/tv_item_today_list_time"
+            android:background="@color/color_tag_android"
+            android:padding="5px"
+            android:text="android"
+            android:textColor="@color/white"
+            android:textSize="24px"
+            />
+
+        <TextView
+            android:id="@+id/tv_item_today_list_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60px"
+            android:layout_marginRight="60px"
+            android:layout_marginTop="62px"
+            android:lineSpacingExtra="@dimen/y10"
+            android:paddingBottom="20px"
+            android:paddingTop="20px"
+            android:text="Easy More Operation ViewController in swift."
+            android:textColor="@color/colorThemeBlack"
+            android:textSize="32px"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_item_today_list_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_item_today_list_content"
+            android:layout_marginLeft="60px"
+            android:text="via. Fan Ye"
+            android:textColor="@color/colorThemeGray"
+            android:textSize="26px"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/tv_item_today_list_author"
+            android:layout_marginLeft="60px"
+            android:layout_marginTop="28px"
+            android:background="@color/colorThemeGray3"
+            />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_item_today_list_cancel"
+        android:layout_width="@dimen/y160"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@color/colorThemeBlack"
+        android:text="取消"
+        android:textColor="@color/white"
+        android:textSize="15sp"
+        />
+
+</com.mcxtzhang.swipemenulib.SwipeMenuLayout>

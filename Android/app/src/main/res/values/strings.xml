@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Gank_Android</string>
+
+    <string-array name="libs">
+        <item>EventBus,https://github.com/greenrobot/EventBus</item>
+        <item>ButterKnife,https://github.com/JakeWharton/butterknife</item>
+        <item>Glide,https://github.com/bumptech/glide</item>
+        <item>OkHttpUtils,https://github.com/hongyangAndroid/okhttputils</item>
+        <item>AutoLayout,https://github.com/hongyangAndroid/AndroidAutoLayout</item>
+        <item>Logger,https://github.com/orhanobut/logger</item>
+        <item>StatusBarUitl,https://github.com/laobie/StatusBarUtil</item>
+        <item>UtilCode,www</item>
+        <item>SwipeBackLayout,https://github.com/ikew0ng/SwipeBackLayout</item>
+        <item>RealTimeBlurView,https://github.com/mmin18/RealtimeBlurView</item>
+        <item>GalleryFinal,https://github.com/FinalTeam/RxGalleryFinal</item>
+        <item>AgentWeb,https://github.com/Justson/AgentWeb</item>
+        <item>OverScroll,https://github.com/EverythingMe/overscroll-decor</item>
+        <item>CalendarView,https://github.com/huanghaibin-dev/CalendarView</item>
+        <item>RefreshLayout,www</item>
+        <item>SwitchButton,https://github.com/kyleduo/SwitchButton</item>
+    </string-array>
+
+</resources>

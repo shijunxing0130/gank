@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:gravity="center_vertical"
+              android:layout_width="match_parent"
+              android:background="@color/colorThemeGray5"
+              android:layout_height="70px">
+    <TextView
+        android:id="@+id/tv_item_lib_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="40px"
+        android:text="关于作者"
+        android:textColor="@color/colorThemeGray"
+        android:textSize="20px"
+        />
+</LinearLayout>

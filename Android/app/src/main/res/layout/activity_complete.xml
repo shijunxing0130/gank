@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="74px"
+        android:layout_height="74px"
+        android:layout_marginTop="22px"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/iv_login_close"
+            android:layout_width="17px"
+            android:layout_height="35px"
+            android:src="@drawable/icon_back_black"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_login_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="241px"
+        android:layout_marginTop="213px"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40px"
+            android:text="完善信息"
+            android:textColor="@color/colorThemeBlack"
+            android:textSize="55px"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="20px"
+            android:text="完善信息以使用更多服务"
+            android:textColor="@color/gray_b3b3b3"
+            android:textSize="28px"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="50px"
+            android:text="昵称"
+            android:textColor="@color/gray_b3b3b3"
+            android:textSize="26px"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="20px">
+
+            <EditText
+                android:id="@+id/et_complete_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:textColor="@color/colorThemeBlack"
+                android:textSize="38px"/>
+
+        </RelativeLayout>
+
+
+        <View
+            android:id="@+id/v_line_complete_name"
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            android:layout_marginLeft="40px"
+            android:background="@color/colorThemeGray5"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="20px"
+            android:text="密码"
+            android:textColor="@color/gray_b3b3b3"
+            android:textSize="26px"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="40px"
+            android:layout_marginTop="20px">
+
+
+            <EditText
+                android:id="@+id/et_complete_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:textColor="@color/colorThemeBlack"
+                android:textSize="38px"/>
+
+
+            <ImageButton
+                android:id="@+id/iv_complete_clear_pw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="#00000000"
+                android:padding="5px"
+                android:src="@drawable/ic_delete_number_login"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/v_line_complete_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="3px"
+            android:layout_marginBottom="5px"
+            android:layout_marginLeft="40px"
+            android:background="@color/colorThemeGray5"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/tv_complete_done"
+        android:layout_width="140px"
+        android:layout_height="60px"
+        android:layout_alignBottom="@+id/ll_login_input"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="5px"
+        android:layout_marginRight="40px"
+        android:background="@drawable/oval_btn_bg_gray"
+        android:gravity="center"
+        android:padding="10px"
+        android:text="完成"
+        android:textColor="@color/white"
+        android:textSize="28px"
+        >
+
+    </TextView>
+</RelativeLayout>

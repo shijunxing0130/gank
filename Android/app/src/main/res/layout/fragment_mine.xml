@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorThemeGray4"
+                android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/sv_mine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="130px"
+        android:paddingTop="145px">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_mine_info"
+                android:layout_width="match_parent"
+                android:layout_height="150px"
+                android:background="@color/white">
+
+
+                <TextView
+                    android:id="@+id/tv_mine_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="40px"
+                    android:text="呵呵哒"
+                    android:textColor="@color/colorThemeBlack"
+                    android:textSize="34px"
+                    />
+
+
+
+                <ImageView
+                    android:id="@+id/iv_mine_head"
+                    android:layout_width="120px"
+                    android:layout_height="120px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="70px"
+                    android:src="@drawable/holder_small_image"
+                    />
+                <ImageView
+                    android:layout_width="16px"
+                    android:layout_height="26px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="30px"
+                    android:src="@drawable/icon_into"
+                    />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+
+                android:id="@+id/rl_mine_notify"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_marginTop="30px"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40px"
+                    android:text="干货推送"
+                    android:textColor="@color/colorThemeBlack"
+                    android:textSize="32px"
+                    />
+
+                <ImageView
+                    android:layout_width="16px"
+                    android:layout_height="26px"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30px"
+                    android:src="@drawable/icon_into"
+                    />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_mine_thank"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40px"
+                    android:text="感谢编辑们"
+                    android:textColor="@color/colorThemeBlack"
+                    android:textSize="32px"
+                    />
+
+                <ImageView
+                    android:layout_width="16px"
+                    android:layout_height="26px"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30px"
+                    android:src="@drawable/icon_into"
+                    />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_mine_about"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_marginTop="30px"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40px"
+                    android:text="关于"
+                    android:textColor="@color/colorThemeBlack"
+                    android:textSize="32px"
+                    />
+
+                <ImageView
+                    android:layout_width="16px"
+                    android:layout_height="26px"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30px"
+                    android:src="@drawable/icon_into"
+                    />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_mine_update"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40px"
+                    android:text="版本更新"
+                    android:textColor="@color/colorThemeBlack"
+                    android:textSize="32px"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_rl_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="8px"
+                    android:paddingLeft="8px"
+                    android:layout_marginTop="5px"
+                    android:layout_marginLeft="200px"
+                    android:text="new"
+                    android:background="@drawable/btn_shape_red"
+                    android:textColor="@color/white"
+                    android:textSize="24px"
+                    />
+
+                <ImageView
+                    android:layout_width="16px"
+                    android:layout_height="26px"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30px"
+                    android:src="@drawable/icon_into"
+                    />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_mine_recommon"
+                android:layout_width="match_parent"
+                android:visibility="gone"
+                android:layout_height="100px"
+                android:layout_marginTop="30px"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40px"
+                    android:text="推荐给朋友"
+                    android:textColor="@color/colorThemeBlack"
+                    android:textSize="32px"
+                    />
+
+                <ImageView
+                    android:layout_width="16px"
+                    android:layout_height="26px"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30px"
+                    android:src="@drawable/icon_into"
+                    />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_mine_grade"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:background="@color/white"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40px"
+                    android:text="给干货集中营评分"
+                    android:textColor="@color/colorThemeBlack"
+                    android:textSize="32px"
+                    />
+
+                <ImageView
+                    android:layout_width="16px"
+                    android:layout_height="26px"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30px"
+                    android:src="@drawable/icon_into"
+                    />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_mine_logout"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_marginTop="30px"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="退出登录"
+                android:textColor="@color/red"
+                android:textSize="32px"
+                />
+
+            <TextView
+                android:id="@+id/tv_mine_version"
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:gravity="center"
+                android:text="v1.0.0 (Build 696)"
+                android:textColor="@color/colorThemeGray"
+                android:textSize="28px"
+                />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+    <include layout="@layout/layout_toolbar_mine"/>
+
+</RelativeLayout>

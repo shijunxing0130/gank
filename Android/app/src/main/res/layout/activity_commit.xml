@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_commit_commit"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:layout_alignParentBottom="true"
+        android:background="#d49e39"
+        android:gravity="center"
+        android:text="(｡◕∀◕｡) 发射!"
+        android:textColor="@color/white"
+        android:textSize="40px"/>
+
+    <include layout="@layout/layout_toolbar"/>
+
+    <ScrollView
+        android:id="@+id/scrollView_commit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_commit_commit"
+        android:layout_below="@+id/ll_toolbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="240px"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg"/>
+
+            <ImageView
+                android:layout_width="200px"
+                android:layout_height="268px"
+                android:layout_alignParentRight="true"
+                android:layout_margin="40px"
+                android:src="@drawable/icon_head"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60px"
+                android:layout_marginTop="72px"
+                android:gravity="center"
+                android:text="提交干货"
+                android:textColor="@color/colorThemeBlack"
+                android:textSize="40px"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60px"
+                android:layout_marginTop="132px"
+                android:gravity="center"
+                android:text="为开发者们贡献乐趣与知识~"
+                android:textColor="@color/colorThemeGray"
+                android:textSize="28px"/>
+
+            <RelativeLayout
+                android:id="@+id/rl_step0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="338px">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:src="@drawable/step_zero"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="88px"
+                    android:gravity="center"
+                    android:text="Step0:"
+                    android:textColor="@color/colorThemeBlack"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="90px"
+                    android:layout_marginRight="90px"
+                    android:layout_marginTop="60px"
+
+                    android:lineSpacingExtra="10dp"
+                    android:text="阅读优秀干货的定义:\n
+· 功能专一，文档完备，国际化，能加速开发的开源库或者框架\n
+· 新颖技术架构的完整 App 项目\n
+· 原创，深入浅出的文章（非简单入门）\n
+· 激发灵感的展示性项目~"
+                    android:textColor="@color/colorThemeBlack"
+                    android:textSize="28px"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_step1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_step0"
+                android:layout_marginTop="20px"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:src="@drawable/step_one"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="88px"
+                    android:gravity="center"
+                    android:text="Step1:"
+                    android:textColor="@color/colorThemeBlack"
+                    android:textSize="32px"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="90px"
+                    android:layout_marginRight="90px"
+                    android:layout_marginTop="60px"
+                    android:lineSpacingExtra="10dp"
+                    android:text="请对着 你最爱的老师 发誓，接下来提交的满足上述其一!"
+                    android:textColor="@color/colorThemeBlack"
+                    android:textSize="28px"/>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_step1"
+                android:layout_marginTop="20px">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:src="@drawable/step_tow"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="88px"
+                    android:gravity="center"
+                    android:text="Step2:"
+                    android:textColor="@color/colorThemeBlack"
+                    android:textSize="32px"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50px"
+                    android:layout_marginTop="80px"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et_commit_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50px"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:hint="请选择分类"
+                        android:textColor="@color/colorThemeGolden"
+                        android:textColorHint="#888888"
+                        android:textSize="30px"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="90px"
+                        android:layout_marginRight="90px"
+                        android:layout_marginTop="10px"
+                        android:background="@color/colorThemeGray3"
+                        />
+
+                    <EditText
+                        android:id="@+id/et_commit_url"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50px"
+                        android:layout_marginTop="30px"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:hint="干货的 URL 地址"
+                        android:textColor="@color/colorThemeGolden"
+                        android:textColorHint="#888888"
+                        android:textSize="30px"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="90px"
+                        android:layout_marginRight="90px"
+                        android:layout_marginTop="10px"
+                        android:background="@color/colorThemeGray3"
+                        />
+
+                    <EditText
+                        android:id="@+id/et_commit_dec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50px"
+                        android:layout_marginTop="30px"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:hint="描述... 不要超过这一行... 至少也得 5 个字"
+                        android:textColor="@color/colorThemeGolden"
+                        android:textColorHint="#888888"
+                        android:textSize="30px"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="90px"
+                        android:layout_marginRight="90px"
+                        android:layout_marginTop="10px"
+                        android:background="@color/colorThemeGray3"
+                        />
+
+                    <EditText
+                        android:id="@+id/et_commit_who"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50px"
+                        android:layout_marginTop="30px"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:hint="作者"
+                        android:textColor="@color/colorThemeGolden"
+                        android:textColorHint="#888888"
+                        android:textSize="30px"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_marginLeft="90px"
+                        android:layout_marginRight="90px"
+                        android:layout_marginTop="10px"
+                        android:background="@color/colorThemeGray3"
+                        />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
