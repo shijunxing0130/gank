@@ -102,6 +102,7 @@ public class GankHuoController extends BaseController<GankHuoModelImpl, GankHuoM
         params.put("url", url);
         params.put("desc", desc);
         params.put("who", who);
+        params.put("debug", "false");
 
         HttpFactory.getHelper().invokePost(context, UrlKit.getUrl(UrlKit.API_ADD), params,
                 new JsonCallback<BaseResponse<String>>() {

@@ -11,9 +11,11 @@ import com.gank.android.app.ui.base.BaseActivity;
 import com.gank.android.app.ui.dialog.GankHuoTypeDialog;
 import com.gank.android.app.even.RequestEventID;
 import com.gank.android.app.controller.GankHuoController;
+import com.gank.android.mvc.events.BaseEvent;
 import com.gank.android.mvc.events.DataEvent;
 import com.gank.android.mvc.events.DataEventListener;
 import com.gank.android.mvc.events.EventDispatcherUtils;
+import com.gank.android.mvc.events.NoticeEventListener;
 
 import butterknife.BindView;
 import cn.gank.androidlibs.httphelper.Result;
@@ -90,13 +92,14 @@ public class CommitActivity extends BaseActivity<GankHuoController> {
 
     private void commit(){
         getUiDelegate().showWaitDialog("提交中");
-        EventDispatcherUtils.addListener(getReceiverIDCard(), RequestEventID.ADD, new DataEventListener<Result>() {
+        EventDispatcherUtils.addListener(getReceiverIDCard(), RequestEventID.ADD, new NoticeEventListener() {
 
             @Override
-            public void onEvent(DataEvent<Result> event) {
+            public void onEvent(BaseEvent event) {
                 getUiDelegate().hideWaitDialog();
-                getUiDelegate().toast(event.getResultData().getMsg());
+                getUiDelegate().toast(event.getMsg());
             }
+
         });
         controller.addGankHuo(this,
                 mEtCommitType.getText().toString(),
